@@ -6,8 +6,7 @@ const buttons = document.getElementsByTagName("button");
 console.log(buttons);
 
 const displayNum = (event) => {
-  console.log("hello");
-  input.value = input.value + "10";
+  input.value = input.value + event.target.value;
 };
 
 Array.from(buttons).forEach((button) =>
