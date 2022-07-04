@@ -14,6 +14,10 @@ const displayNum = (event) => {
       reverseNumber();
       break;
 
+    case pressedButton == "%":
+      percentage();
+      break;
+
     case pressedButton == "=":
       performOperation();
       break;
@@ -35,7 +39,7 @@ const displayNum = (event) => {
 
       // IF YOU ARE TRYING TO ADD A SECOND VALID OPERATOR  EVAL THE EXPRESSION
 
-      const operatorsRegex = new RegExp(/[+-/x]/);
+      const operatorsRegex = new RegExp(/[x+/-]/);
       if (operatorsRegex.test(input.value.substring(1))) {
         performOperation();
       }
@@ -66,11 +70,6 @@ const performOperation = () => {
       value = parseFloat(expression[0]) + parseFloat(expression[1]);
       break;
 
-    case input.value.includes("-"):
-      expression = input.value.split("-");
-      value = parseFloat(expression[0]) - parseFloat(expression[1]);
-      break;
-
     case input.value.includes("x"):
       expression = input.value.split("x");
       value = parseFloat(expression[0]) * parseFloat(expression[1]);
@@ -84,15 +83,34 @@ const performOperation = () => {
     case input.value.includes("%"):
       expression = input.value.split("%");
       value = parseFloat((expression[0] / parseFloat(expression[1])) * 100);
+
+    case input.value.substring(1).includes("-"):
+      if (input.value[0] != "-") {
+        expression = input.value.split("-");
+        value = parseFloat(expression[0]) - parseFloat(expression[1]);
+      } else {
+        expression = input.value.substring(1).split("-");
+        value = parseFloat(expression[0] * -1) - parseFloat(expression[1]);
+      }
   }
 
   input.value = value;
 };
 
 const reverseNumber = () => {
+  if (/[x+/-]/.test(input.value.substring(1))) {
+    input.value =
+      input.value[0] + input.value.substring(1).replace(/[x+/-]/, "");
+  }
+
   input.value = input.value * -1;
+  return;
+};
 
-  //input.value = input.value.replace(/[+-/x]/, "");
+const percentage = () => {
+  console.log(input.value.substring(1));
+  if (/[x+/-]/.test(input.value.substring(1))) return;
 
+  input.value = input.value / 100;
   return;
 };

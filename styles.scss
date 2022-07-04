@@ -8,7 +8,7 @@
     flex-direction:column;
     align-items:center;
 
-    #phone-frame{
+    #container__image{
 
         @media (max-width: 400px) {
             visibility: hidden;
@@ -46,7 +46,7 @@
         
         
 
-        .input-screen{
+        .top__input-screen{
 
             background-color: black;
             color:white;
@@ -80,7 +80,7 @@
       
        
 
-        .grid-container {
+        .container__grid-container {
             display: grid;
             grid-template-columns: auto auto auto auto;
             text-align: center;
