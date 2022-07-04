@@ -51,7 +51,6 @@
 }
 .container .container__bottom .grid-container .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 .container .container__bottom .grid-container .grid-item--light-grey {
   background-color: #a0a0a0;
@@ -63,9 +62,13 @@
   border: none;
 }
 @media (min-width: 800px) {
-  .container .container__bottom .grid-container .grid-item--light-grey {
-    height: 4rem;
-    width: 4rem;
+  .container .container__bottom .grid-container .grid-item--light-grey:active {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 800px) {
+  .container .container__bottom .grid-container .grid-item--light-grey:active {
+    opacity: 0.5;
   }
 }
 .container .container__bottom .grid-container .grid-item--grey {
@@ -78,9 +81,13 @@
   border: none;
 }
 @media (min-width: 800px) {
-  .container .container__bottom .grid-container .grid-item--grey {
-    height: 4rem;
-    width: 4rem;
+  .container .container__bottom .grid-container .grid-item--grey:active {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 800px) {
+  .container .container__bottom .grid-container .grid-item--grey:active {
+    opacity: 0.5;
   }
 }
 .container .container__bottom .grid-container .grid-item--orange {
@@ -93,8 +100,12 @@
   border: none;
 }
 @media (min-width: 800px) {
-  .container .container__bottom .grid-container .grid-item--orange {
-    height: 4rem;
-    width: 4rem;
+  .container .container__bottom .grid-container .grid-item--orange:active {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 800px) {
+  .container .container__bottom .grid-container .grid-item--orange:active {
+    opacity: 0.5;
   }
 }/*# sourceMappingURL=styles2.css.map */
