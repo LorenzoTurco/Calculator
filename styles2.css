@@ -6,22 +6,42 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .container .container__top {
   background-color: black;
-  height: 40vh;
+  height: 12rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.container .container__top .input-screen {
+  background-color: black;
+  color: white;
+  height: 2rem;
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 2rem;
+  border: none;
+}
+.container .separator {
+  color: red;
+  height: 2rem;
+  width: 2rem;
 }
 .container .container__bottom {
   background-color: black;
-  height: auto;
+  height: 18rem;
+  width: 15rem;
 }
 .container .container__bottom .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  height: 98%;
   text-align: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 0.6rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -30,39 +50,47 @@
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
 .container .container__bottom .grid-container .grid-item--light-grey {
-  background-color: lightgrey;
+  background-color: #a0a0a0;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   align-items: center;
+  font-size: 1.3rem;
+  border: none;
 }
 @media (min-width: 800px) {
   .container .container__bottom .grid-container .grid-item--light-grey {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
   }
 }
 .container .container__bottom .grid-container .grid-item--grey {
-  background-color: grey;
+  background-color: #313131;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
 }
 @media (min-width: 800px) {
   .container .container__bottom .grid-container .grid-item--grey {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
   }
 }
 .container .container__bottom .grid-container .grid-item--orange {
-  background-color: orange;
+  background-color: #f69906;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
 }
 @media (min-width: 800px) {
   .container .container__bottom .grid-container .grid-item--orange {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles2.css.map */

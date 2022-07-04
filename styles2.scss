@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    .container__top{
+
+        background-color: black;
+        height: 12rem;
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding:1rem;
+
+        
+        
+
+        .input-screen{
+
+            background-color: black;
+            color:white;
+            height:2rem;
+            margin-bottom: 0px;
+            text-align: right;
+            font-size: 2rem;
+            border:none;
+        }
+
+    }
+
+    .separator{
+        color: red;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .container__bottom{
+
+        background-color: black;
+        height: 18rem;
+        width: 15rem;
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: center;
+            justify-content:center;
+            gap:0.6rem;
+            margin-left:1rem;
+            margin-right:1rem;
+            
+          
+          .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+          
+
+            
+
+            &--light-grey{
+
+                background-color: #a0a0a0;
+                border-radius:50%;
+                height:3rem;
+                width:3rem;
+                align-items: center;
+                font-size: 1.3rem;
+                border: none;
+
+
+
+                @media (min-width: 800px) {
+                    height:4rem;
+                    width:4rem;
+                    
+                }
+
+
+            }
+
+            &--grey{
+
+                background-color: #313131;
+                border-radius:50%;
+                height:3rem;
+                width:3rem;
+                color:white;
+                font-size: 1.5rem;
+                border: none;
+
+
+
+
+
+                @media (min-width: 800px) {
+                    height:4rem;
+                    width:4rem;
+                    
+                }
+
+           
+
+
+            }
+
+            &--orange{
+                background-color: #f69906;
+                border-radius:50%;
+                height:3rem;
+                width:3rem;
+                color:white;
+                font-size: 1.5rem;
+                border: none;
+
+
+
+
+                @media (min-width: 800px) {
+                    height:4rem;
+                    width:4rem;
+                    
+                }
+
+             
+            }
+          }
+        }
+
+    
+}
+          
+}
+

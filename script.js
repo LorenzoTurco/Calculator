@@ -1,5 +1,4 @@
 const input = document.querySelector("#input-screen");
-
 const buttons = document.getElementsByTagName("button");
 console.log(buttons);
 
