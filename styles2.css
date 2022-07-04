@@ -10,6 +10,8 @@
 }
 .container .container__top {
   background-color: black;
+  position: absolute;
+  top: 5rem;
   height: 12rem;
   width: 15rem;
   display: flex;
@@ -35,6 +37,8 @@
   background-color: black;
   height: 18rem;
   width: 15rem;
+  position: absolute;
+  top: 17rem;
 }
 .container .container__bottom .grid-container {
   display: grid;
