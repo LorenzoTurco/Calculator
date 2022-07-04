@@ -3,15 +3,14 @@
     box-sizing: border-box;
 }
 
-.container{
+.calculator{
     display:flex;
     flex-direction:column;
     align-items:center;
 
-    #container__image{
+    #calculator__image{
 
         @media (max-width: 400px) {
-            visibility: hidden;
             display:none;
 
             }
@@ -21,9 +20,8 @@
             
     }
 
-    .container__top{
+    .calculator__top{
 
-        background-color: black;
 
         @media (min-width: 400px) {
             position: absolute;
@@ -37,7 +35,7 @@
             width: 100%;
             }
 
-        
+        background-color: black;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -46,7 +44,7 @@
         
         
 
-        .top__input-screen{
+        .calculator__input-screen{
 
             background-color: black;
             color:white;
@@ -54,11 +52,14 @@
             text-align: right;
             font-size: 2rem;
             border:none;
+            @media (max-width: 400px) {
+            padding-right:2rem;
+            }
         }
 
     }
 
-    .container__bottom{
+    .calculator__bottom{
 
         @media (min-width: 400px) {
             position: absolute;
@@ -71,16 +72,12 @@
                 height:62vh;
                 width: 100%;
 
-                }
-
-        
+            }
+      
         padding-bottom:2rem;
-
         background-color: black;
       
-       
-
-        .container__grid-container {
+        .calculator__grid-calculator {
             display: grid;
             grid-template-columns: auto auto auto auto;
             text-align: center;
@@ -89,144 +86,118 @@
             margin-left:1rem;
             margin-right:1rem;
             
-          
-          .grid-item {
+          .calculator__grid-item {
             background-color: rgba(255, 255, 255, 0.8);
-          
 
-            
-            @media (min-width: 400px) {
+
             &--light-grey{
-
                 background-color: #a0a0a0;
                 border-radius:50%;
-                height:3rem;
-                width:3rem;
                 align-items: center;
-                font-size: 1.3rem;
-                border: none;
                 font-family: "Helvetica"; 
-                font-weight: 500;}
+                border:none;
+            }
+           
+            @media (min-width: 400px) {
+                &--light-grey{
+          
+                    height:3rem;
+                    width:3rem;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
             }
 
 
             @media (max-width: 400px) {
-                    &--light-grey{
+                &--light-grey{
 
-                        background-color: #a0a0a0;
-                        border-radius:50%;
-                        height:4.5rem;
-                        width:4.5rem;
-                        align-items: center;
-                        font-size: 2rem;
-                        border: none;
-        
+                    height:4.5rem;
+                    width:4.5rem;
+                    font-size: 2rem;
+                    
                     }
-                    }
-
-
-                
+            }
 
             &--light-grey:active{
-
                 opacity: 0.5;
             }
-            
 
-      
-            @media (min-width: 400px) {
+
             &--grey{
 
                 background-color: #313131;
                 border-radius:50%;
-                height:3rem;
-                width:3rem;
                 color:white;
-                font-size: 1.5rem;
                 border: none;
+            }
+            
+            @media (min-width: 400px) {
 
-
-            }   }
+                &--grey{   
+                    height:3rem;
+                    width:3rem;
+                    font-size: 1.5rem;
+                }   }
 
             @media (max-width: 400px) {
+
                 &--grey{
-    
-                    background-color: #313131;
-                    border-radius:50%;
                     height:4.5rem;
                     width:4.5rem;
-                    color:white;
-                    border: none;
                     font-size: 2rem;
-
-    
-    
                 }   }
+
                 &--grey:active{
-    
                     opacity: 0.5;
                 }
 
                 &--long{
-
                     grid-column: span 2;
-
-                    
                     -webkit-border-radius: 2rem;
-
-                    @media (max-width: 400px) {
-                        width: 9rem;
-                        font-size: 2rem;
-                    }
-
                     width: 6.5rem;
                     text-align: left;
                     padding-left: 1.2rem;
 
-
-                    
+                    @media (max-width: 400px) {
+                        width: 9rem;
+                        font-size: 2rem;
+                    }  
                 }
                 
-    
-         
-
-                @media (min-width: 400px) {
-
-            &--orange{
-                background-color: #f69906;
-                border-radius:50%;
-                height:3rem;
-                width:3rem;
-                color:white;
-                font-size: 1.5rem;
-                border: none;
-
-            }
-            }
-
-            
-            @media (max-width: 400px) {
-
                 &--orange{
                     background-color: #f69906;
                     border-radius:50%;
-                    height:4.5rem;
-                    width:4.5rem;
                     color:white;
-                    font-size: 2rem;
                     border: none;
-    
                 }
+
+                @media (min-width: 400px) {
+
+                    &--orange{
+               
+                        height:3rem;
+                        width:3rem;
+                        font-size: 1.5rem;
+
+                    }
+                }
+
+            
+                @media (max-width: 400px) {
+
+                    &--orange{
+              
+                        height:4.5rem;
+                        width:4.5rem;
+                        font-size: 2rem;
+                    }
                 }
 
                 &--orange:active{
-    
                     opacity: 0.5;
                 }
                 
-    
-
-    
 }
           
 }

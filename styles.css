@@ -3,22 +3,21 @@
   box-sizing: border-box;
 }
 
-.container {
+.calculator {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container #container__image {
+.calculator #calculator__image {
   height: 37.5rem;
   width: 18.75rem;
 }
 @media (max-width: 400px) {
-  .container #container__image {
-    visibility: hidden;
+  .calculator #calculator__image {
     display: none;
   }
 }
-.container .container__top {
+.calculator .calculator__top {
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -26,7 +25,7 @@
   padding: 1rem;
 }
 @media (min-width: 400px) {
-  .container .container__top {
+  .calculator .calculator__top {
     position: absolute;
     top: 5rem;
     height: 12rem;
@@ -34,12 +33,12 @@
   }
 }
 @media (max-width: 400px) {
-  .container .container__top {
+  .calculator .calculator__top {
     height: 38vh;
     width: 100%;
   }
 }
-.container .container__top .top__input-screen {
+.calculator .calculator__top .calculator__input-screen {
   background-color: black;
   color: white;
   height: 2rem;
@@ -47,12 +46,17 @@
   font-size: 2rem;
   border: none;
 }
-.container .container__bottom {
+@media (max-width: 400px) {
+  .calculator .calculator__top .calculator__input-screen {
+    padding-right: 2rem;
+  }
+}
+.calculator .calculator__bottom {
   padding-bottom: 2rem;
   background-color: black;
 }
 @media (min-width: 400px) {
-  .container .container__bottom {
+  .calculator .calculator__bottom {
     position: absolute;
     top: 17rem;
     height: 18rem;
@@ -60,12 +64,12 @@
   }
 }
 @media (max-width: 400px) {
-  .container .container__bottom {
+  .calculator .calculator__bottom {
     height: 62vh;
     width: 100%;
   }
 }
-.container .container__bottom .container__grid-container {
+.calculator .calculator__bottom .calculator__grid-calculator {
   display: grid;
   grid-template-columns: auto auto auto auto;
   text-align: center;
@@ -74,62 +78,58 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.container .container__bottom .container__grid-container .grid-item {
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item {
   background-color: rgba(255, 255, 255, 0.8);
 }
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--light-grey {
+  background-color: #a0a0a0;
+  border-radius: 50%;
+  align-items: center;
+  font-family: "Helvetica";
+  border: none;
+}
 @media (min-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--light-grey {
-    background-color: #a0a0a0;
-    border-radius: 50%;
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--light-grey {
     height: 3rem;
     width: 3rem;
-    align-items: center;
     font-size: 1.3rem;
-    border: none;
-    font-family: "Helvetica";
     font-weight: 500;
   }
 }
 @media (max-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--light-grey {
-    background-color: #a0a0a0;
-    border-radius: 50%;
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--light-grey {
     height: 4.5rem;
     width: 4.5rem;
-    align-items: center;
     font-size: 2rem;
-    border: none;
   }
 }
-.container .container__bottom .container__grid-container .grid-item--light-grey:active {
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--light-grey:active {
   opacity: 0.5;
 }
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--grey {
+  background-color: #313131;
+  border-radius: 50%;
+  color: white;
+  border: none;
+}
 @media (min-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--grey {
-    background-color: #313131;
-    border-radius: 50%;
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--grey {
     height: 3rem;
     width: 3rem;
-    color: white;
     font-size: 1.5rem;
-    border: none;
   }
 }
 @media (max-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--grey {
-    background-color: #313131;
-    border-radius: 50%;
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--grey {
     height: 4.5rem;
     width: 4.5rem;
-    color: white;
-    border: none;
     font-size: 2rem;
   }
 }
-.container .container__bottom .container__grid-container .grid-item--grey:active {
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--grey:active {
   opacity: 0.5;
 }
-.container .container__bottom .container__grid-container .grid-item--long {
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--long {
   grid-column: span 2;
   -webkit-border-radius: 2rem;
   width: 6.5rem;
@@ -137,33 +137,31 @@
   padding-left: 1.2rem;
 }
 @media (max-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--long {
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--long {
     width: 9rem;
     font-size: 2rem;
   }
 }
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--orange {
+  background-color: #f69906;
+  border-radius: 50%;
+  color: white;
+  border: none;
+}
 @media (min-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--orange {
-    background-color: #f69906;
-    border-radius: 50%;
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--orange {
     height: 3rem;
     width: 3rem;
-    color: white;
     font-size: 1.5rem;
-    border: none;
   }
 }
 @media (max-width: 400px) {
-  .container .container__bottom .container__grid-container .grid-item--orange {
-    background-color: #f69906;
-    border-radius: 50%;
+  .calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--orange {
     height: 4.5rem;
     width: 4.5rem;
-    color: white;
     font-size: 2rem;
-    border: none;
   }
 }
-.container .container__bottom .container__grid-container .grid-item--orange:active {
+.calculator .calculator__bottom .calculator__grid-calculator .calculator__grid-item--orange:active {
   opacity: 0.5;
 }/*# sourceMappingURL=styles.css.map */
