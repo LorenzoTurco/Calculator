@@ -22,19 +22,30 @@ const displayNum = (event) => {
     case pressedButton == "-":
     case pressedButton == "/":
     case pressedButton == "x": {
-      if (
-        ["+", "-", "x", "/"].includes(input.value[input.value.length - 1]) &&
-        input.value.length > 0
-      ) {
+      if (input.value.length == 0) break; //DONT MAKE OPERATOR BE FIRST DIGIT
+
+      //CANT PUT AN OPERATOR AFTER AN OPERATOR - CHANGE OPERATOR (IF OPERATOR LAST DIGIT)
+      if (["+", "-", "x", "/"].includes(input.value[input.value.length - 1])) {
+        console.log("Cant put an operator after an operator");
         input.value =
           input.value.substring(0, input.value.length - 1) + pressedButton;
+
         break;
       }
+
+      // IF YOU ARE TRYING TO ADD A SECOND VALID OPERATOR  EVAL THE EXPRESSION
+
+      const operatorsRegex = new RegExp(/[+-/x]/);
+      if (operatorsRegex.test(input.value.substring(1))) {
+        performOperation();
+      }
+
       input.value = input.value + pressedButton;
       break;
     }
 
     default:
+      console.log("normal number");
       input.value = input.value + pressedButton;
   }
 };
@@ -47,7 +58,9 @@ const performOperation = () => {
   let expression = [];
   let value = NaN;
 
-  switch (true) {
+  switch (
+    true //includes(searchElement, fromIndex)
+  ) {
     case input.value.includes("+"):
       expression = input.value.split("+");
       value = parseFloat(expression[0]) + parseFloat(expression[1]);
@@ -78,5 +91,8 @@ const performOperation = () => {
 
 const reverseNumber = () => {
   input.value = input.value * -1;
+
+  //input.value = input.value.replace(/[+-/x]/, "");
+
   return;
 };
