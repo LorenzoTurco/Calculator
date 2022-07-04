@@ -8,13 +8,36 @@
     flex-direction:column;
     align-items:center;
 
+    #phone-frame{
+
+        @media (max-width: 400px) {
+            visibility: hidden;
+            display:none;
+
+            }
+
+        height:37.5rem;
+        width:18.75rem;
+            
+    }
+
     .container__top{
 
         background-color: black;
-        position: absolute;
-        top: 5rem;
-        height: 12rem;
-        width: 15rem;
+
+        @media (min-width: 400px) {
+            position: absolute;
+            top: 5rem;
+            height: 12rem;
+            width: 15rem;
+            }
+      
+            @media (max-width: 400px) {
+            height:38vh;
+            width: 100%;
+            }
+
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -28,7 +51,6 @@
             background-color: black;
             color:white;
             height:2rem;
-            margin-bottom: 0px;
             text-align: right;
             font-size: 2rem;
             border:none;
@@ -36,19 +58,27 @@
 
     }
 
-    .separator{
-        color: red;
-        height: 2rem;
-        width: 2rem;
-    }
-
     .container__bottom{
 
+        @media (min-width: 400px) {
+            position: absolute;
+            top: 17rem;
+            height: 18rem;
+            width: 15rem;
+            }
+
+            @media (max-width: 400px) {
+                height:62vh;
+                width: 100%;
+
+                }
+
+        
+        padding-bottom:2rem;
+
         background-color: black;
-        height: 18rem;
-        width: 15rem;
-        position: absolute;
-        top: 17rem;
+      
+       
 
         .grid-container {
             display: grid;
@@ -65,7 +95,7 @@
           
 
             
-
+            @media (min-width: 400px) {
             &--light-grey{
 
                 background-color: #a0a0a0;
@@ -74,25 +104,37 @@
                 width:3rem;
                 align-items: center;
                 font-size: 1.3rem;
-                border: none; }
-
-            @media (min-width: 800px) {
-            &--light-grey:active{
-
-                opacity: 0.5;
-            }
+                border: none;
+                font-family: "Helvetica"; 
+                font-weight: 500;}
             }
 
-            @media (max-width: 800px) {
-               
+
+            @media (max-width: 400px) {
+                    &--light-grey{
+
+                        background-color: #a0a0a0;
+                        border-radius:50%;
+                        height:4.5rem;
+                        width:4.5rem;
+                        align-items: center;
+                        font-size: 2rem;
+                        border: none;
+        
+                    }
+                    }
+
+
                 
+
             &--light-grey:active{
 
                 opacity: 0.5;
             }
-        }
+            
 
-
+      
+            @media (min-width: 400px) {
             &--grey{
 
                 background-color: #313131;
@@ -104,21 +146,51 @@
                 border: none;
 
 
-            }   
-            @media (min-width: 800px) {
+            }   }
+
+            @media (max-width: 400px) {
+                &--grey{
+    
+                    background-color: #313131;
+                    border-radius:50%;
+                    height:4.5rem;
+                    width:4.5rem;
+                    color:white;
+                    border: none;
+                    font-size: 2rem;
+
+    
+    
+                }   }
                 &--grey:active{
     
                     opacity: 0.5;
                 }
-                }
-    
-                @media (max-width: 800px) {
-                   
+
+                &--long{
+
+                    grid-column: span 2;
+
                     
-                &--grey:active{
+                    -webkit-border-radius: 2rem;
+
+                    @media (max-width: 400px) {
+                        width: 9rem;
+                        font-size: 2rem;
+                    }
+
+                    width: 6.5rem;
+                    text-align: left;
+                    padding-left: 1.2rem;
+
+
+                    
+                }
+                
     
-                    opacity: 0.5;
-                }}
+         
+
+                @media (min-width: 400px) {
 
             &--orange{
                 background-color: #f69906;
@@ -129,24 +201,30 @@
                 font-size: 1.5rem;
                 border: none;
 
-             
+            }
             }
 
-            @media (min-width: 800px) {
+            
+            @media (max-width: 400px) {
+
+                &--orange{
+                    background-color: #f69906;
+                    border-radius:50%;
+                    height:4.5rem;
+                    width:4.5rem;
+                    color:white;
+                    font-size: 2rem;
+                    border: none;
+    
+                }
+                }
+
                 &--orange:active{
     
                     opacity: 0.5;
                 }
-                }
+                
     
-                @media (max-width: 800px) {
-                   
-                    
-                &--orange:active{
-    
-                    opacity: 0.5;
-                }
-        }
 
     
 }
