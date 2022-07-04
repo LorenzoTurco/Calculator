@@ -18,6 +18,22 @@ const displayNum = (event) => {
       performOperation();
       break;
 
+    case pressedButton == "+":
+    case pressedButton == "-":
+    case pressedButton == "/":
+    case pressedButton == "x": {
+      if (
+        ["+", "-", "x", "/"].includes(input.value[input.value.length - 1]) &&
+        input.value.length > 0
+      ) {
+        input.value =
+          input.value.substring(0, input.value.length - 1) + pressedButton;
+        break;
+      }
+      input.value = input.value + pressedButton;
+      break;
+    }
+
     default:
       input.value = input.value + pressedButton;
   }
@@ -61,14 +77,6 @@ const performOperation = () => {
 };
 
 const reverseNumber = () => {
-  if (parseInt(input.value) > 0) {
-    console.log(input.value);
-    console.log(parseInt(input.value) - parseInt(input.value) * 2);
-    input.value = parseInt(input.value) - parseInt(input.value) * 2;
-    console.log(input.value);
-
-    return;
-  }
   input.value = input.value * -1;
   return;
 };
