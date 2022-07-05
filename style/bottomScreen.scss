@@ -1,4 +1,4 @@
-
+@use "variables.scss" as *;
 
 .calculator__bottom{
 
@@ -32,7 +32,7 @@
 
 
         &--light-grey{
-            background-color: #a0a0a0;
+            background-color: $buttonLightGrey;
             border-radius:50%;
             align-items: center;
             font-family: "Helvetica"; 
@@ -67,7 +67,7 @@
 
         &--grey{
 
-            background-color: #313131;
+            background-color: $buttonGrey;
             border-radius:50%;
             color:white;
             border: none;
@@ -107,7 +107,7 @@
             }
             
             &--orange{
-                background-color: #f69906;
+                background-color: $buttonOrange;
                 border-radius:50%;
                 color:white;
                 border: none;
