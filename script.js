@@ -18,6 +18,10 @@ const displayNum = (event) => {
       percentage();
       break;
 
+    case pressedButton == ".":
+      addDot();
+      break;
+
     case pressedButton == "=":
       performOperation();
       break;
@@ -113,4 +117,12 @@ const percentage = () => {
 
   input.value = input.value / 100;
   return;
+};
+
+const addDot = () => {
+  if (input.value[input.value.length - 1] == ".") {
+    return;
+  }
+
+  input.value += ".";
 };
