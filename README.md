@@ -7,3 +7,5 @@
 # IMPLEMENTATION
 
 # I utilised event handlers in JavaScript to detect when a button is pressed and perform the appropriate action.
+
+![screenshot](calculator-screenshot.PNG)
