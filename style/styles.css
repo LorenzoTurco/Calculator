@@ -109,7 +109,7 @@
   opacity: 0.5;
 }
 .calculator__bottom .calculator__grid-calculator .calculator__grid-item--grey {
-  background-color: red;
+  background-color: #313131;
   border-radius: 50%;
   color: white;
   border: none;
@@ -145,7 +145,7 @@
   }
 }
 .calculator__bottom .calculator__grid-calculator .calculator__grid-item--orange {
-  background-color: #f69906;
+  background-color: orange;
   border-radius: 50%;
   color: white;
   border: none;
@@ -166,4 +166,4 @@
 }
 .calculator__bottom .calculator__grid-calculator .calculator__grid-item--orange:active {
   opacity: 0.5;
-}
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,25 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "![screenshot](calculator-screenshot.PNG)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress open"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenzoTurco/Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LorenzoTurco/Calculator/issues"
+  },
+  "homepage": "https://github.com/LorenzoTurco/Calculator#readme",
+  "devDependencies": {
+    "cypress": "^10.3.0"
+  }
+}

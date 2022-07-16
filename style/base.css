@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calculator #calculator__image {
+  height: 37.5rem;
+  width: 18.75rem;
+}
+@media (max-width: 400px) {
+  .calculator #calculator__image {
+    display: none;
+  }
+}/*# sourceMappingURL=base.css.map */
